@@ -1,11 +1,12 @@
-import { Text, View } from "react-native";
+import StartingSplashScreen from "@/screens/splash-screens";
+import ChooseProductSplash from "@/screens/splash-screens/choose-product-splash";
+import { useState } from "react";
 
 export default function Index() {
-  return (
-    <View className="flex-1 items-center justify-center bg-red-400">
-      <Text className="text-xl font-bold text-blue-500">
-        Welcome to Nativewind!
-      </Text>
-    </View>
-  );
+  const [showSplashScreen, setShowSplashScreen] = useState(true);
+
+  if(showSplashScreen){
+    return <StartingSplashScreen onChange={() => setShowSplashScreen(false)} />
+  }
+  return <ChooseProductSplash />
 }
