@@ -8,7 +8,7 @@ import AuthButton from '@/components/auth/auth-button';
 
 const ForgotPasswordScreen = () => {
   return (
-    <SafeAreaView className='flex-1 pt-10 px-8'>
+    <SafeAreaView className='bg-white flex-1 pt-10 px-8'>
       <View>
         <AuthHeading title='Forgot Password?' />
       </View>
