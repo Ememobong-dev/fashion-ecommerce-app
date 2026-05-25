@@ -1,6 +1,7 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useRouter } from 'expo-router';
 
 
 const SplashData = [
@@ -26,14 +27,15 @@ const SplashData = [
 
 const ChooseProductSplash = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-
     const activeData = SplashData[activeIndex];
+    const router = useRouter();
 
 
     
     const handleNext = () => {
         if (activeIndex === SplashData.length - 1) {
             // navigate to next screen
+            router.push("/create-account")
             return;
         }
 
