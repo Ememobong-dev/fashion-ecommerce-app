@@ -8,7 +8,7 @@ import { Link } from 'expo-router';
 
 const CreateAccountScreen = () => {
     return (
-        <SafeAreaView className='flex-1 pt-10 px-8'>
+        <SafeAreaView className='bg-white flex-1 pt-10 px-8'>
             <View>
                 <AuthHeading title='Create an account' />
             </View>

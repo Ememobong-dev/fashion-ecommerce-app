@@ -4,7 +4,7 @@ import React from 'react'
 const AuthHeading = ({title} : {title: string}) => {
   return (
     <View>
-      <Text className='text-black w-1/2 font-montserratBold text-4xl'>{title}</Text>
+      <Text className='text-black w-[55%] font-montserratBold text-4xl'>{title}</Text>
     </View>
   )
 }

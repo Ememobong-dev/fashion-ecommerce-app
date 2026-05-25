@@ -7,5 +7,9 @@ export const COLORS = {
     offWhite: "#F3F3F3",
     naturalGray: "#676767",
     gradeGray: "#575757",
-    lightPink: "#FCF3F6"
+    lightPink: "#FCF3F6",
+    lightBlue: "#4392F9",
+    lightGray: "#F2F2F2",
+    tertiary: "#FDFDFD",
+    
 }

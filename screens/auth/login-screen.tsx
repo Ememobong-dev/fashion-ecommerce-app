@@ -1,4 +1,4 @@
-import { Image, Text, Touchable, TouchableOpacity, View } from 'react-native'
+import { Image, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import AuthHeading from '@/components/auth/auth-heading';
@@ -10,7 +10,7 @@ import { Link, useRouter } from 'expo-router';
 const LoginScreen = () => {
   const router = useRouter();
   return (
-    <SafeAreaView className='flex-1 pt-10 px-8'>
+    <SafeAreaView className='bg-white flex-1 pt-10 px-8'>
       <View>
         <AuthHeading title='Welcome Back!' />
       </View>
@@ -26,7 +26,7 @@ const LoginScreen = () => {
 
       </View>
       <View className='mt-6'>
-        <AuthButton title='Login' />
+        <AuthButton title='Login' onPress={() => router.push("/home")} />
       </View>
 
       <View className='mt-6 gap-6'>
