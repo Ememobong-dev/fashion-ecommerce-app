@@ -11,6 +11,7 @@ import {
   Montserrat_400Regular,
   Montserrat_500Medium,
   Montserrat_700Bold,
+  Montserrat_600SemiBold,
   Montserrat_800ExtraBold,
 } from "@expo-google-fonts/montserrat";
 import { View } from "react-native";
@@ -24,6 +25,7 @@ export default function RootLayout() {
     Montserrat_400Regular,
     Montserrat_500Medium,
     Montserrat_700Bold,
+    Montserrat_600SemiBold,
     Montserrat_800ExtraBold,
   });
 

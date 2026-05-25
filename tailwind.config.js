@@ -15,6 +15,7 @@ module.exports = {
         libreItalic: ["LibreCaslonText_400Regular_Italic"],
         montserrat: ["Montserrat_400Regular"],
         montserratMedium: ["Montserrat_500Medium"],
+        montserratSemiBold: ["Montserrat_600SemiBold"],
         montserratBold: ["Montserrat_700Bold"],
         montserratExtraBold: ["Montserrat_800ExtraBold"],
       },

@@ -1,5 +1,5 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
@@ -29,6 +29,8 @@ const ChooseProductSplash = () => {
 
     const activeData = SplashData[activeIndex];
 
+
+    
     const handleNext = () => {
         if (activeIndex === SplashData.length - 1) {
             // navigate to next screen
@@ -37,6 +39,22 @@ const ChooseProductSplash = () => {
 
         setActiveIndex((prev) => prev + 1);
     };
+
+    
+    useEffect(() => {
+        const interval = setInterval(() => {
+          setActiveIndex((prev) => {
+            if (prev === SplashData.length - 1) {
+              return prev;
+            }
+      
+            return prev + 1;
+          });
+        }, 5000);
+      
+        return () => clearInterval(interval);
+      }, []);
+
 
     const handlePrev = () => {
         if (activeIndex === 0) return;
@@ -52,7 +70,7 @@ const ChooseProductSplash = () => {
         <SafeAreaView className='flex-1 px-8 bg-white'>
             <View className="flex-row mt-5 justify-between">
                 <Text className="font-montserrat font-semibold text-xl">
-                    {activeIndex + 1}/<Text className="text-secondary">3</Text>
+                    {activeIndex + 1}/<Text className={` ${activeIndex + 1 === SplashData.length ? "text-black" : "text-secondary"}`}>{SplashData.length}</Text>
                 </Text>
 
                 <Text onPress={handleSkip} className="text-xl font-semibold">
@@ -73,7 +91,7 @@ const ChooseProductSplash = () => {
                 {
                     activeIndex > 0 ? (
                         <TouchableOpacity onPress={handlePrev}>
-                            <Text className='text-gray text-lg'>Prev</Text>
+                            <Text className='text-gray  font-montserratSemiBold text-xl'>Prev</Text>
                         </TouchableOpacity>
 
                     ) : <View />
@@ -88,7 +106,7 @@ const ChooseProductSplash = () => {
 
                 </View>
                 <TouchableOpacity onPress={handleNext}>
-                    <Text className="text-primary text-lg">
+                    <Text className="text-primary font-montserratSemiBold text-xl">
                         {activeIndex === SplashData.length - 1 ? "Get Started" : "Next"}
                     </Text>
                 </TouchableOpacity>
