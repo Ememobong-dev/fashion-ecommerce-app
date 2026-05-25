@@ -1,4 +1,4 @@
-import { Image, Text, View } from 'react-native';
+import { Image, View } from 'react-native';
 import React, { useEffect } from 'react';
 import Animated, {
     useSharedValue,
