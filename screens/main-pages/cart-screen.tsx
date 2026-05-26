@@ -5,7 +5,7 @@ import Navbar from '@/components/common/navbar';
 import SearchBar from '@/components/common/search-bar';
 import SortFilterWrapper from '@/components/common/sort-filter-wrapper';
 
-const HomeScreen = () => {
+const CartScreen = () => {
   return (
     <SafeAreaView className='pt-10 px-8 bg-tertiary flex-1'>
       <Navbar />
@@ -19,4 +19,4 @@ const HomeScreen = () => {
   )
 }
 
-export default HomeScreen;
+export default CartScreen;
