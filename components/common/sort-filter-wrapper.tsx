@@ -1,6 +1,7 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { Ionicons } from '@expo/vector-icons'
+import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { Ionicons } from '@expo/vector-icons';
+import FilterIcon from "@/assets/images/svgs/filter-icon.svg";
 
 export default function SortFilterWrapper({ title }: { title: string }) {
     return (
@@ -10,11 +11,11 @@ export default function SortFilterWrapper({ title }: { title: string }) {
                 <View style={styles.cardShadow} className='flex-row gap-3 items-center justify-center rounded-lg bg-white p-2'>
                     <Text>Sort</Text>
                     <Ionicons name='swap-vertical' size={20} color='black' />
-
                 </View>
                 <View style={styles.cardShadow} className='flex-row gap-3 items-center justify-center rounded-lg bg-white p-2'>
                     <Text>Filter</Text>
-                    <Ionicons name='funnel-outline' size={20} color='black' />
+                    <FilterIcon width={20} height={20} />
+                    {/* <Ionicons name='funnel-outline' size={20} color='black' /> */}
                 </View>
             </View>
         </View>
